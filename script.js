@@ -44,19 +44,6 @@ for (var i = 0; i < navLinks.length; i++) {
   });
 }
 //contact page
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-  event.preventDefault();
 
-  // these IDs from the previous steps
-  const serviceID = 'service_mvayk4e';
-  const templateID = 'template_0ll211s';
-
-  emailjs.sendForm(serviceID, templateID, this)
-      .then(() => {
-          alert('Message sent successfully!');
-      }, (err) => {
-          alert('Failed to send message. Please try again later.');
-      });
-});
 
 

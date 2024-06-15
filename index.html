@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="button">
-          <button><a href="https://www.linkedin.com/in/sudip-ghosh-746396256">Hire Me</a></button>
+          <a href="https://www.linkedin.com/in/sudip-ghosh-746396256"><button >Hire Me</button></a>
         </div>
       </div>
     </section>
@@ -78,7 +78,7 @@
             <p>Throughout my career, I have gained valuable experience in creating user-friendly and responsive websites. I am proficient in React and enjoy building dynamic web applications that provide seamless user experiences. My approach to development is centered around writing clean, maintainable code and continually seeking out new challenges to grow my skill set.</p>
             <p>I am enthusiastic about collaborating with other developers and designers to create innovative web solutions. In my current role, I have successfully contributed to several projects, demonstrating my ability to adapt and thrive in fast-paced environments. I am excited about the future and the opportunities to leverage my skills to make a meaningful impact in the field of web development.</p>
             <div class="button">
-                <a href="https://drive.google.com/file/d/1_80z33qoZGqr1UOA3eqh829kpyCCH903/view?usp=sharing" download>
+                <a href="Resume__ Feb (1).pdf" download>
                     <button>Download CV</button>
                 </a>
             </div>
@@ -95,7 +95,7 @@
         <div class="skills-details">
           <div class="text">
             <div class="topic">Skills Reflects Our Knowledge</div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus natus tenetur tempora? Quasi, rem quas omnis. Porro rem aspernatur reiciendis ut praesentium minima ad, quos, officia! Illo libero, et, distinctio repellat sed nesciunt est modi quaerat placeat. Quod molestiae, alias?</p>
+            <p>I have two years of experience working with HTML and CSS, during which I have developed a strong foundation in web design and responsive development. Over the past year, I have expanded my skill set to include JavaScript and React, allowing me to build dynamic and interactive web applications. Currently, I am further enhancing my expertise by learning the MERN stack, which includes MongoDB, Express.js, React, and Node.js.</p>
             <div class="experience">
               <div class="num">6</div>
               <div class="exp">
@@ -165,23 +165,35 @@
           <h2>Contact Me</h2>
           <form id="contact-form">
               <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="from_name" required> <!-- Changed name attribute to from_name -->
               <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="user_email" required> <!-- Changed name attribute to user_email -->
               <label for="message">Message</label>
               <textarea id="message" name="message" required></textarea>
               <button type="submit">Send Message</button>
           </form>
       </div>
   </section>
-
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.6.4/dist/email.min.js"></script>
   <script>
       (function(){
           emailjs.init('bUadhmJ-grPDnPLBN');
       })();
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+  
+          // these IDs from the previous steps
+          const serviceID = 'service_5wdeipn';
+          const templateID = 'template_y384lbc';
+  
+          emailjs.sendForm(serviceID, templateID, this)
+              .then(() => {
+                  alert('Message sent successfully!');
+              }, (err) => {
+                  alert('Failed to send message. Please try again later.');
+              });
+      });
   </script>
-
     <!-- Footer Section Start -->
     <footer>
       <div class="text">
